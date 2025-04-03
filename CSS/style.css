@@ -8,6 +8,8 @@ nav{
     justify-content: space-between;
     background-color: rgb(125, 190, 255);
     padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 body{
@@ -71,6 +73,8 @@ body{
 .fondImgBouton{
     width: 50%;
     margin: 10px;
+    position: relative;
+    z-index: 0;
 }
 
 .boutonImage{
