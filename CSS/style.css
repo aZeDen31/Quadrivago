@@ -102,3 +102,21 @@ body{
     color: white;
     font-size: 24px;
 }
+
+.hotelCard{
+    border: 1px solid;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.plhImgHotel{
+    width: 200px;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 20px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
