@@ -78,15 +78,11 @@ body{
 }
 
 .boutonImage{
-    /*justify-content:center;
-    display: inline-block;
-    position: relative;
-    text-align: center;*/
 
     display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    align-items: center; /* Centre l'image verticalement si la hauteur est définie */
-    position: relative; /* Permet de positionner le bouton par rapport à l'image */
+    justify-content: center; 
+    align-items: center;
+    position: relative;
     height: 50%;
 }
 
