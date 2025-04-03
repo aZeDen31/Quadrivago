@@ -1,0 +1,19 @@
+.logoPic, .profilePic{
+    width: 100px;
+    height: 100px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(125, 190, 255);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    border: 1px solid;
+}
