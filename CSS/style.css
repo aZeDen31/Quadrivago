@@ -156,3 +156,61 @@ body{
     margin-top: 20px;
     color: #333;
 }
+
+#infosProfil{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+#infosProfil2{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border-radius: 20px;
+    background-color: rgb(102, 181, 218);
+}
+
+#texteProfil{
+    height: auto;
+    width: auto;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+#texteProfil h4,
+#texteProfil p {
+    margin: 0;
+    padding: 0;
+}
+
+.reservations{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.reservation1{
+    display: flex;
+    justify-content: flex-start;
+    width: 30%;
+    border-radius: 20px;
+    background-color: rgb(102, 181, 218);
+    padding: 1%;
+}
+
+.reservation1 img{
+    width: 200px;
+    border-radius: 20px;
+}
+
+.reservationInfos{
+    padding-left:20px;
+}
+
+.reservationEtTexte{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
