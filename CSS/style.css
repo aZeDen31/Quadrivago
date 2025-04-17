@@ -12,6 +12,12 @@ nav{
     z-index: 1;
 }
 
+.recherche{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
 body{
     margin: 0;
     padding: 0;
