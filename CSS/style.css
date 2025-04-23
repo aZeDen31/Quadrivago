@@ -116,3 +116,21 @@ body{
     justify-content: center;
     margin-bottom: 50px;
 }
+
+header button{
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 0 5px 5px 0;
+}
+
+header input{
+    padding: 5px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px 0 0 5px;
+}
+
+header form{
+    align-self: center;
+}
