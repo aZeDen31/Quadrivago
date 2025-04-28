@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrivago - Connexion</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="inscriptionConnexion">
+        <form method="post" action="/login" id="postInscriptionConnexion">
+            <div class="formulaire">
+                <input type="email" id="Mail" name="mail" placeholder="Entrez votre E-mail" required>
+                <input type="password" id="mdp" name="mdp" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <div class="buttonlink">
+                <button type="submit" id="bouton">Connexion</button>
+                <a href="/register">Pas encore de compte ? Inscrivez vous</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+</script>
+</html>
