@@ -254,6 +254,7 @@ header form{
     display: flex;
     flex-direction: column;
     justify-content:center;
+    align-items: center;
 }
 
 #mdp,#Mail,#mdp2,#username{
