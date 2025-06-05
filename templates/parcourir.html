@@ -2,39 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Document</title>
+    <title>Quadrivago - Parcourir</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div id="header"></div>
-    
+    <header>
+    <nav>
+        <a href="/"><img src="../static/quadrivago logo.png" alt="logo" class="logoPic"></a>
+
+        <form action="/parcourir">
+            <input type="text" name="recherche" id="barreRecherche" placeholder="Rechercher...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div class="dropdown" tabindex="0">
+            <a href="#">Villes</a>
+            <ul class="submenu">
+                <li><a href="#">Mardrid</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Rome</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Rechercher une ville</a></li>
+            </ul>
+        </div>
+
+        <a href="/connexion"><img src="../static/placeholder-profile.png" alt="profilePic" class="profilePic"></a>
+    </nav>
+</header>
+
     <div class="cardsParcourir">
+        {{range .Hotels}}
         <div class="hotelCard">
-            <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-            <p>Hotel Saint-Helmes</p>
+            <img src="/static/{{.Image}}" alt="{{.Name}}" class="plhImgHotel">
+            <p>{{.Name}}</p>
+            <p>À partir de {{.PricePerNight}}€ / nuit</p>
             <button>Réserver</button>
         </div>
-
-        <div class="hotelCard">
-            <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-            <p>Hotel Saint-Helmes</p>
-            <button>Réserver</button>
-        </div>
-
-        <div class="hotelCard">
-            <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-            <p>Hotel Saint-Helmes</p>
-            <button>Réserver</button>
-        </div>
+        {{else}}
+        <p>Aucun hôtel disponible pour le moment.</p>
+        {{end}}
     </div>
 
+    <script>
+        fetch("/static/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+    </script>
 </body>
-
-<script>
-    fetch("header.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("header").innerHTML = data);
-</script>
-
 </html>

@@ -7,18 +7,40 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
-    <div id="header"></div>
+    <header>
+    <nav>
+        <a href="/"><img src="../static/quadrivago logo.png" alt="logo" class="logoPic"></a>
+
+        <form action="/parcourir">
+            <input type="text" name="recherche" id="barreRecherche" placeholder="Rechercher...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div class="dropdown" tabindex="0">
+            <a href="#">Villes</a>
+            <ul class="submenu">
+                <li><a href="#">Mardrid</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Rome</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Rechercher une ville</a></li>
+            </ul>
+        </div>
+
+        <a href="/connexion"><img src="../static/placeholder-profile.png" alt="profilePic" class="profilePic"></a>
+    </nav>
+</header>
 
     <div class="inscriptionConnexion">
         <form method="post" action="/login" id="postInscriptionConnexion">
             <div class="formulaire">
+                <input type="username" id="Mail" name="username" placeholder="Entrez votre pseudo" required>
                 <input type="email" id="Mail" name="mail" placeholder="Entrez votre E-mail" required>
                 <input type="password" id="mdp" name="mdp" placeholder="Entrez votre mot de passe" required>
                 <input type="password" id="mdp2" name="mdpConfirm" placeholder="Entrez à nouveau votre mot de passe" required>
             </div>
             <div class="buttonlink">
                 <button type="submit" id="bouton">Connexion</button>
-                <a href="connexion.html">Déjà inscrit ? Connectez vous !</a>
+                <a href="/connexion">Déjà inscrit ? Connectez vous !</a>
             </div>
         </form>
     </div>
