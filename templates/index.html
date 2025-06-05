@@ -7,17 +7,46 @@
     <link rel="stylesheet" href="../static/style.css">
 </head>
 
+<header>
+    <nav>
+        <a href="/"><img src="../static/quadrivago logo.png" alt="logo" class="logoPic"></a>
+
+        <form action="/parcourir">
+            <input type="text" name="recherche" id="barreRecherche" placeholder="Rechercher...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div class="dropdown" tabindex="0">
+            <a href="#">Villes</a>
+            <ul class="submenu">
+                <li><a href="#">Mardrid</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Rome</a></li>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Rechercher une ville</a></li>
+            </ul>
+        </div>
+
+        <a href="#" id="profileLink"><img src="../static/placeholder-profile.png" alt="profilePic" class="profilePic"></a>
+
+        <script>
+            fetch("/api/check-auth") 
+                .then(res => res.json())
+                .then(data => {
+                    if (data.connected) {
+                        document.getElementById("profileLink").href = "/profil";
+                    } else {
+                        document.getElementById("profileLink").href = "/login";
+                    }
+                });
+        </script>
+    </nav>
+</header>
+
 <body>
-    <div id="header"></div>
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("header").innerHTML = data);
-    </script>
 
     <div class="boutonImage">
         <img src="../static/hotelimg.jpg" alt="fondImgBouton" class="fondImgBouton">
-        <a href="parcourir.html"><button class="boutonReservation">Réserver</button></a>
+        <a href="/parcourir"><button class="boutonReservation">Réserver</button></a>
     </div>
 
     <div class="container">
@@ -43,50 +72,6 @@
             </div>
         </div>
 
-        <div class="cards">
-            <div class="hotelCard">
-                <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-                <p>Hotel Saint-Helmes</p>
-                <button>Réserver</button>
-            </div>
-
-            <div class="hotelCard">
-                <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-                <p>Hotel Saint-Helmes</p>
-                <button>Réserver</button>
-            </div>
-
-            <div class="hotelCard">
-                <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-                <p>Hotel Saint-Helmes</p>
-                <button>Réserver</button>
-            </div>
-        </div>
-
-        <div class="cards">
-            <div class="hotelCard">
-                <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-                <p>Hotel Saint-Helmes</p>
-                <button>Réserver</button>
-            </div>
-
-            <div class="hotelCard">
-                <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-                <p>Hotel Saint-Helmes</p>
-                <button>Réserver</button>
-            </div>
-
-            <div class="hotelCard">
-                <img src="../static/imageplhhotel.jpg" alt="plhhotel" class="plhImgHotel">
-                <p>Hotel Saint-Helmes</p>
-                <button>Réserver</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="AjoutBouton">
-        <p>Vous voulez votre hotel sur le site ?</p>
-        <a href="ajoutHotel.html"><button>Ajoutez le !</button></a>
     </div>
 
 </body>

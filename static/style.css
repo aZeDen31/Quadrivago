@@ -3,6 +3,8 @@
     height: 100px;
 }
 
+
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -21,6 +23,7 @@ nav{
 body{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .dropdown {
@@ -107,7 +110,8 @@ body{
 
 .hotelCard{
     border-radius: 20px;
-    width: fit-content;
+    width: 250px;
+    max-width: 90vw;
     margin-right: 50px;
     margin-left: 50px;
     margin-bottom: 50px;
@@ -150,7 +154,13 @@ body{
 }
 
 .cardsParcourir{
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+    justify-content: center;
+    gap: 30px; /* Espacement entre les cards */
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 #reserTitre{
@@ -245,7 +255,7 @@ header form{
 
 /* Copié collé de forum à modifier */
 
-#postInscriptionConnexion, #postAjoutHotel{
+#postInscriptionConnexion{
     gap: 20px;
     padding: 50px;
     background-color: rgb(142, 210, 255);
@@ -257,7 +267,7 @@ header form{
     align-items: center;
 }
 
-#mdp,#Mail,#mdp2,#username,#NomHotel,#AdresseHotel,#DescriptionHotel{
+#mdp,#Mail,#mdp2,#username{
     border-radius: 5px;
     padding: 10px;
     width: 200px;
@@ -277,7 +287,7 @@ header form{
     margin-bottom: 0;
 }
 
-#bouton,#boutonAjoutHotel{
+#bouton{
     padding: 5px;
     width: 100px;
     border-radius: 10px;
@@ -310,56 +320,8 @@ header form{
     align-items: center;
 }
 
-.inscriptionConnexion, .AjoutHotel{
+.inscriptionConnexion{
     display: flex;
     justify-content: center;
     margin-top: 50px;
-}
-
-#HotelDesc{
-    padding: 10px;
-    border-radius: 5px;
-    resize: none;
-}
-
-.buttonAjoutHotel{
-    align-self: normal;
-    padding-top: 0%;
-}
-
-#boutonAjoutHotel{
-    border-radius: 7px;
-}
-
-#NightPrice{
-    padding: 5px;
-    width: 100px;
-    border-radius: 5px;
-}
-
-#imageAdd{
-    color:#444;
-}
-
-.AjoutBouton{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 20px;
-}
-
-.AjoutBouton button{
-    border-radius: 7px;
-    padding: 10px;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.AjoutBouton button:hover{
-    background-color: rgb(201, 201, 201);
-}
-
-.AjoutBouton button:active{
-    background-color: rgb(137, 137, 137);
-    color: white;
 }
